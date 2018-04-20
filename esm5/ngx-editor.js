@@ -107,8 +107,6 @@ var CommandExecutorService = /** @class */ (function () {
     };
     CommandExecutorService.prototype.insertImage = function (imageURI) {
         if (this.savedSelection) {
-            console.log('image uri is');
-            console.log(imageURI);
             if (imageURI) {
                 var restored = restoreSelection(this.savedSelection);
                 if (restored) {
@@ -672,11 +670,9 @@ var NgxEditorToolbarComponent = /** @class */ (function () {
                     if (event instanceof HttpResponse) {
                         try {
                             if (_this.config.responseEndPoint) {
-                                console.log(_this.config.responseEndPoint + event.body.url);
                                 _this._commandExecutorService.insertImage(_this.config.responseEndPoint + event.body.url);
                             }
                             else {
-                                console.log(event.body.url);
                                 _this._commandExecutorService.insertImage(event.body.url);
                             }
                         }
