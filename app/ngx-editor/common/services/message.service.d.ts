@@ -1,5 +1,4 @@
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
 export declare class MessageService {
     /** variable to hold the user message */
     private message;
@@ -17,5 +16,5 @@ export declare class MessageService {
      *
      * @param milliseconds time in seconds in which the message has to be cleared
      */
-    private clearMessageIn(milliseconds);
+    private clearMessageIn;
 }

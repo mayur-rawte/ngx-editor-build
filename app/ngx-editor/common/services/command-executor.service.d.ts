@@ -31,12 +31,12 @@ export declare class CommandExecutorService {
      *
      * @param url Youtue URL
      */
-    private isYoutubeLink(url);
+    private isYoutubeLink;
     /**
      * check whether the string is a valid url or not
      * @param url url
      */
-    private isValidURL(url);
+    private isValidURL;
     /**
      * uploads image to the server
      *
@@ -70,21 +70,21 @@ export declare class CommandExecutorService {
      */
     setFontName(fontName: string): void;
     /** insert HTML */
-    private insertHtml(html);
+    private insertHtml;
     /**
      * check whether the value is a number or string
      * if number return true
      * else return false
      */
-    private isNumeric(value);
+    private isNumeric;
     /** delete the text at selected range and return the value */
-    private deleteAndGetElement();
+    private deleteAndGetElement;
     /** check any slection is made or not */
-    private checkSelection();
+    private checkSelection;
     /**
      * check tag is supported by browser or not
      *
      * @param tag HTML tag
      */
-    private checkTagSupportInBrowser(tag);
+    private checkTagSupportInBrowser;
 }
