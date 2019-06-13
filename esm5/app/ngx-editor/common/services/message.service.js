@@ -1,31 +1,15 @@
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
- */
+import * as tslib_1 from "tslib";
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-/**
- * time in which the message has to be cleared
- * @type {?}
- */
+/** time in which the message has to be cleared */
 var DURATION = 7000;
 var MessageService = /** @class */ (function () {
     function MessageService() {
-        /**
-         * variable to hold the user message
-         */
+        /** variable to hold the user message */
         this.message = new Subject();
     }
     /** returns the message sent by the editor */
-    /**
-     * returns the message sent by the editor
-     * @return {?}
-     */
-    MessageService.prototype.getMessage = /**
-     * returns the message sent by the editor
-     * @return {?}
-     */
-    function () {
+    MessageService.prototype.getMessage = function () {
         return this.message.asObservable();
     };
     /**
@@ -33,19 +17,7 @@ var MessageService = /** @class */ (function () {
      *
      * @param message message to be sent
      */
-    /**
-     * sends message to the editor
-     *
-     * @param {?} message message to be sent
-     * @return {?}
-     */
-    MessageService.prototype.sendMessage = /**
-     * sends message to the editor
-     *
-     * @param {?} message message to be sent
-     * @return {?}
-     */
-    function (message) {
+    MessageService.prototype.sendMessage = function (message) {
         this.message.next(message);
         this.clearMessageIn(DURATION);
         return;
@@ -55,38 +27,18 @@ var MessageService = /** @class */ (function () {
      *
      * @param milliseconds time in seconds in which the message has to be cleared
      */
-    /**
-     * a short interval to clear message
-     *
-     * @param {?} milliseconds time in seconds in which the message has to be cleared
-     * @return {?}
-     */
-    MessageService.prototype.clearMessageIn = /**
-     * a short interval to clear message
-     *
-     * @param {?} milliseconds time in seconds in which the message has to be cleared
-     * @return {?}
-     */
-    function (milliseconds) {
+    MessageService.prototype.clearMessageIn = function (milliseconds) {
         var _this = this;
         setTimeout(function () {
             _this.message.next(undefined);
         }, milliseconds);
         return;
     };
-    MessageService.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    MessageService.ctorParameters = function () { return []; };
+    MessageService = tslib_1.__decorate([
+        Injectable(),
+        tslib_1.__metadata("design:paramtypes", [])
+    ], MessageService);
     return MessageService;
 }());
 export { MessageService };
-if (false) {
-    /**
-     * variable to hold the user message
-     * @type {?}
-     */
-    MessageService.prototype.message;
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVzc2FnZS5zZXJ2aWNlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LWVkaXRvci8iLCJzb3VyY2VzIjpbImFwcC9uZ3gtZWRpdG9yL2NvbW1vbi9zZXJ2aWNlcy9tZXNzYWdlLnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBQyxVQUFVLEVBQUMsTUFBTSxlQUFlLENBQUM7QUFHekMsT0FBTyxFQUFDLE9BQU8sRUFBQyxNQUFNLE1BQU0sQ0FBQzs7Ozs7SUFHdkIsUUFBUSxHQUFHLElBQUk7QUFFckI7SUFNRTs7OztRQUZRLFlBQU8sR0FBb0IsSUFBSSxPQUFPLEVBQUUsQ0FBQztJQUdqRCxDQUFDO0lBRUQsNkNBQTZDOzs7OztJQUM3QyxtQ0FBVTs7OztJQUFWO1FBQ0UsT0FBTyxJQUFJLENBQUMsT0FBTyxDQUFDLFlBQVksRUFBRSxDQUFDO0lBQ3JDLENBQUM7SUFFRDs7OztPQUlHOzs7Ozs7O0lBQ0gsb0NBQVc7Ozs7OztJQUFYLFVBQVksT0FBZTtRQUN6QixJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUMzQixJQUFJLENBQUMsY0FBYyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQzlCLE9BQU87SUFDVCxDQUFDO0lBRUQ7Ozs7T0FJRzs7Ozs7OztJQUNLLHVDQUFjOzs7Ozs7SUFBdEIsVUFBdUIsWUFBb0I7UUFBM0MsaUJBS0M7UUFKQyxVQUFVLENBQUM7WUFDVCxLQUFJLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUMvQixDQUFDLEVBQUUsWUFBWSxDQUFDLENBQUM7UUFDakIsT0FBTztJQUNULENBQUM7O2dCQW5DRixVQUFVOzs7O0lBcUNYLHFCQUFDO0NBQUEsQUFyQ0QsSUFxQ0M7U0FwQ1ksY0FBYzs7Ozs7O0lBR3pCLGlDQUFpRCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7SW5qZWN0YWJsZX0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbmltcG9ydCB7T2JzZXJ2YWJsZX0gZnJvbSAncnhqcyc7XG5pbXBvcnQge1N1YmplY3R9IGZyb20gJ3J4anMnO1xuXG4vKiogdGltZSBpbiB3aGljaCB0aGUgbWVzc2FnZSBoYXMgdG8gYmUgY2xlYXJlZCAqL1xuY29uc3QgRFVSQVRJT04gPSA3MDAwO1xuXG5ASW5qZWN0YWJsZSgpXG5leHBvcnQgY2xhc3MgTWVzc2FnZVNlcnZpY2Uge1xuXG4gIC8qKiB2YXJpYWJsZSB0byBob2xkIHRoZSB1c2VyIG1lc3NhZ2UgKi9cbiAgcHJpdmF0ZSBtZXNzYWdlOiBTdWJqZWN0PHN0cmluZz4gPSBuZXcgU3ViamVjdCgpO1xuXG4gIGNvbnN0cnVjdG9yKCkge1xuICB9XG5cbiAgLyoqIHJldHVybnMgdGhlIG1lc3NhZ2Ugc2VudCBieSB0aGUgZWRpdG9yICovXG4gIGdldE1lc3NhZ2UoKTogT2JzZXJ2YWJsZTxzdHJpbmc+IHtcbiAgICByZXR1cm4gdGhpcy5tZXNzYWdlLmFzT2JzZXJ2YWJsZSgpO1xuICB9XG5cbiAgLyoqXG4gICAqIHNlbmRzIG1lc3NhZ2UgdG8gdGhlIGVkaXRvclxuICAgKlxuICAgKiBAcGFyYW0gbWVzc2FnZSBtZXNzYWdlIHRvIGJlIHNlbnRcbiAgICovXG4gIHNlbmRNZXNzYWdlKG1lc3NhZ2U6IHN0cmluZyk6IHZvaWQge1xuICAgIHRoaXMubWVzc2FnZS5uZXh0KG1lc3NhZ2UpO1xuICAgIHRoaXMuY2xlYXJNZXNzYWdlSW4oRFVSQVRJT04pO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIC8qKlxuICAgKiBhIHNob3J0IGludGVydmFsIHRvIGNsZWFyIG1lc3NhZ2VcbiAgICpcbiAgICogQHBhcmFtIG1pbGxpc2Vjb25kcyB0aW1lIGluIHNlY29uZHMgaW4gd2hpY2ggdGhlIG1lc3NhZ2UgaGFzIHRvIGJlIGNsZWFyZWRcbiAgICovXG4gIHByaXZhdGUgY2xlYXJNZXNzYWdlSW4obWlsbGlzZWNvbmRzOiBudW1iZXIpOiB2b2lkIHtcbiAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgIHRoaXMubWVzc2FnZS5uZXh0KHVuZGVmaW5lZCk7XG4gICAgfSwgbWlsbGlzZWNvbmRzKTtcbiAgICByZXR1cm47XG4gIH1cblxufVxuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVzc2FnZS5zZXJ2aWNlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LWVkaXRvci8iLCJzb3VyY2VzIjpbImFwcC9uZ3gtZWRpdG9yL2NvbW1vbi9zZXJ2aWNlcy9tZXNzYWdlLnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLE9BQU8sRUFBQyxVQUFVLEVBQUMsTUFBTSxlQUFlLENBQUM7QUFHekMsT0FBTyxFQUFDLE9BQU8sRUFBQyxNQUFNLE1BQU0sQ0FBQztBQUU3QixrREFBa0Q7QUFDbEQsSUFBTSxRQUFRLEdBQUcsSUFBSSxDQUFDO0FBR3RCO0lBS0U7UUFIQSx3Q0FBd0M7UUFDaEMsWUFBTyxHQUFvQixJQUFJLE9BQU8sRUFBRSxDQUFDO0lBR2pELENBQUM7SUFFRCw2Q0FBNkM7SUFDN0MsbUNBQVUsR0FBVjtRQUNFLE9BQU8sSUFBSSxDQUFDLE9BQU8sQ0FBQyxZQUFZLEVBQUUsQ0FBQztJQUNyQyxDQUFDO0lBRUQ7Ozs7T0FJRztJQUNILG9DQUFXLEdBQVgsVUFBWSxPQUFlO1FBQ3pCLElBQUksQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxDQUFDO1FBQzNCLElBQUksQ0FBQyxjQUFjLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDOUIsT0FBTztJQUNULENBQUM7SUFFRDs7OztPQUlHO0lBQ0ssdUNBQWMsR0FBdEIsVUFBdUIsWUFBb0I7UUFBM0MsaUJBS0M7UUFKQyxVQUFVLENBQUM7WUFDVCxLQUFJLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUMvQixDQUFDLEVBQUUsWUFBWSxDQUFDLENBQUM7UUFDakIsT0FBTztJQUNULENBQUM7SUFsQ1UsY0FBYztRQUQxQixVQUFVLEVBQUU7O09BQ0EsY0FBYyxDQW9DMUI7SUFBRCxxQkFBQztDQUFBLEFBcENELElBb0NDO1NBcENZLGNBQWMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0luamVjdGFibGV9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5pbXBvcnQge09ic2VydmFibGV9IGZyb20gJ3J4anMnO1xuaW1wb3J0IHtTdWJqZWN0fSBmcm9tICdyeGpzJztcblxuLyoqIHRpbWUgaW4gd2hpY2ggdGhlIG1lc3NhZ2UgaGFzIHRvIGJlIGNsZWFyZWQgKi9cbmNvbnN0IERVUkFUSU9OID0gNzAwMDtcblxuQEluamVjdGFibGUoKVxuZXhwb3J0IGNsYXNzIE1lc3NhZ2VTZXJ2aWNlIHtcblxuICAvKiogdmFyaWFibGUgdG8gaG9sZCB0aGUgdXNlciBtZXNzYWdlICovXG4gIHByaXZhdGUgbWVzc2FnZTogU3ViamVjdDxzdHJpbmc+ID0gbmV3IFN1YmplY3QoKTtcblxuICBjb25zdHJ1Y3RvcigpIHtcbiAgfVxuXG4gIC8qKiByZXR1cm5zIHRoZSBtZXNzYWdlIHNlbnQgYnkgdGhlIGVkaXRvciAqL1xuICBnZXRNZXNzYWdlKCk6IE9ic2VydmFibGU8c3RyaW5nPiB7XG4gICAgcmV0dXJuIHRoaXMubWVzc2FnZS5hc09ic2VydmFibGUoKTtcbiAgfVxuXG4gIC8qKlxuICAgKiBzZW5kcyBtZXNzYWdlIHRvIHRoZSBlZGl0b3JcbiAgICpcbiAgICogQHBhcmFtIG1lc3NhZ2UgbWVzc2FnZSB0byBiZSBzZW50XG4gICAqL1xuICBzZW5kTWVzc2FnZShtZXNzYWdlOiBzdHJpbmcpOiB2b2lkIHtcbiAgICB0aGlzLm1lc3NhZ2UubmV4dChtZXNzYWdlKTtcbiAgICB0aGlzLmNsZWFyTWVzc2FnZUluKERVUkFUSU9OKTtcbiAgICByZXR1cm47XG4gIH1cblxuICAvKipcbiAgICogYSBzaG9ydCBpbnRlcnZhbCB0byBjbGVhciBtZXNzYWdlXG4gICAqXG4gICAqIEBwYXJhbSBtaWxsaXNlY29uZHMgdGltZSBpbiBzZWNvbmRzIGluIHdoaWNoIHRoZSBtZXNzYWdlIGhhcyB0byBiZSBjbGVhcmVkXG4gICAqL1xuICBwcml2YXRlIGNsZWFyTWVzc2FnZUluKG1pbGxpc2Vjb25kczogbnVtYmVyKTogdm9pZCB7XG4gICAgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICB0aGlzLm1lc3NhZ2UubmV4dCh1bmRlZmluZWQpO1xuICAgIH0sIG1pbGxpc2Vjb25kcyk7XG4gICAgcmV0dXJuO1xuICB9XG5cbn1cbiJdfQ==
